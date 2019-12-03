@@ -1,0 +1,30 @@
+{
+  "name": "advent-of-code-2019",
+  "version": "0.0.1",
+  "description": "Trying AoC again I guess",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap src/**/test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianarn/advent-of-code-2019.git"
+  },
+  "author": "Brian Sinclair <brianarn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianarn/advent-of-code-2019/issues"
+  },
+  "homepage": "https://github.com/brianarn/advent-of-code-2019",
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "loglevel": "^1.6.6",
+    "tap": "^14.10.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
