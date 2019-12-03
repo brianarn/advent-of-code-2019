@@ -1,4 +1,4 @@
-const log = require('loglevel');
+const log = require('../log');
 const fs = require('fs');
 
 const easySolver = require('./easy-solver');
@@ -15,9 +15,8 @@ const easyFuel = masses.reduce((accum, mass) => {
   return easySolver(mass) + accum;
 }, 0);
 log.info(`Easy calculation: ${easyFuel}`);
-console.log(easyFuel);
 
-/*
-const hardResult = hardSolver(input);
-console.log(`Hard result: ${hardResult}`);
-*/
+const hardFuel = masses.reduce((accum, mass) => {
+  return hardSolver(mass) + accum;
+}, 0);
+log.info(`Hard calculation: ${hardFuel}`);
